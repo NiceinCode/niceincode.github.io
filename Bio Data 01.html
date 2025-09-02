@@ -1,0 +1,302 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="icon" href="https://img.freepik.com/premium-vector/h-logo-design-english-letter-h-logo-design_135595-1398.jpg">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Niceintools Bio Data_____________________________Create By:Hamid Hasnain.</title>
+</head>
+<style>
+    *{
+        margin: 0%;
+        padding: 0%;
+    }
+    body{
+        background-color: rgb(222, 250, 195);
+    }
+    table{
+        background-color: rgb(253, 246, 246);
+        border:2px solid black;
+        border-radius: 15px;
+        width:750px;
+        height:800px;
+        padding:13px;
+        margin:55px;
+    }
+    input{
+        border:2px solid rgb(12, 12, 12);
+        border-radius:10px;
+       padding: 6px;
+       margin: 7px;
+       font-size: 20px;
+       font-family:Georgia, 'Times New Roman', Times, serif;
+       text-transform: capitalize;
+       font-weight:bold;
+       
+      
+    }
+    select{
+        border:2px solid rgb(12, 12, 12);
+        border-radius:10px;
+       padding: 5px;
+       margin: 7px;
+       font-size:20px;
+       font-weight: bold;
+    }
+    h1{
+        color:rgb(15, 10, 10);
+        text-decoration: underline overline;
+        text-decoration-color: rgb(145, 35, 255);
+        letter-spacing: 3px;
+        margin:0%;
+        padding: 0%;
+        }
+        #photo-box{
+            border-radius: 10px;
+            border:3px solid rgb(13, 13, 14);
+            background-color: rgb(251, 252, 252);
+            height: 4.5cm;
+            width: 3.5cm;
+            float: right;
+            margin-left: 10px;
+            margin-top: 0%;
+            align-items: center;
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            font-size: large;
+          font-weight:900;
+          overflow: hidden;
+            }
+            #photo-box img {
+        width: 3.5cm;
+        height:4.5cm;
+        object-fit: cover;
+    }
+            #photo-input {
+        display: none; /* Hide input */
+    }
+
+     #sign-box{
+        border-radius: 10px;
+            border:3px solid black;
+            background-color: rgb(251, 252, 252);
+            height: 5.0cm;
+            width: 4.0cm;
+            float: right;
+            margin-left: 10px;
+            margin-top: 0%;
+            align-items: center;
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            font-size: large;
+          font-weight:900;
+          overflow: hidden;
+            }
+            #sign-box img {
+        width:90px ;
+        height:60px;
+        object-fit: cover;
+    }
+            #sign-input {
+        display: none; /* Hide input */
+    }
+
+
+             .btns {
+            margin-top: 20px;
+        }
+        button {
+            padding: 8px 15px;
+            margin-right: 10px;
+            cursor: pointer ;
+            color:red;
+            font-weight: bold;
+            font-size: 20px;
+
+        }
+        .upload-box {
+        width: 120px;
+        height: 100px;
+        border: 1px solid #000;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 14px;
+        cursor: pointer;
+        background-color: white;
+        overflow: hidden;
+        margin-bottom: 10px;
+    }
+    .upload-box img {
+        width:0%;
+        height:0%;
+        object-fit: cover;
+    }
+    .upload-input {
+        display: none; /* hide input */
+    }
+    
+</style>
+
+<body>
+    
+    
+<div id="biodata">
+    <center><table><td>
+    <h1><b><center>BIO DATA</center></b></h1><br>
+    <div id="photo-box" onclick="document.getElementById('photo-input').click();" ><b style="color:red;  font-size: 20px;"> Upload Passport Size Photo and size(height 4.5 width 3.5) </b>
+    </div>
+    <input type="file" id="photo-input" accept="image/*" onchange="previewPhoto(event)">
+    <form id="bioForm">
+    <lable style="font-size:25px;    font-family:Georgia, 'Times New Roman', Times, serif;  font-weight:bold; text-transform:capitalize;">Name:</lable>
+    <input type="name" placeholder="Enter Name as per Aadhar." style="width:400px;"><br>
+    <lable style="font-size:25px;    font-family:Georgia, 'Times New Roman', Times, serif;  font-weight:bold; text-transform:capitalize;">Father's Name:</lable>
+    <input type="name" placeholder="Your Father's Name." style="width:300px;"><br>
+    <lable style="font-size:25px;    font-family:Georgia, 'Times New Roman', Times, serif;  font-weight:bold; text-transform:capitalize;">Address:</lable>
+    <input type="name" placeholder="Your Address." style="width:400px;"><br>
+    <lable style="font-size:25px;    font-family:Georgia, 'Times New Roman', Times, serif;  font-weight:bold; text-transform:capitalize;">Contact:</lable>
+    <input type="number" placeholder="Your content Number."><br>
+    <lable style="font-size:25px;    font-family:Georgia, 'Times New Roman', Times, serif;  font-weight:bold; text-transform:capitalize;">D.O.B:</lable>
+    <input type="date" placeholder="Your Date of Birth." style="text-transform: uppercase;"><br>
+    <lable for="birthplace"  style="font-size:25px;    font-family:Georgia, 'Times New Roman', Times, serif;  font-weight:bold; text-transform:capitalize;">Place of Birth:</lable>
+    <input list="Place" placeholder="Your Place Of Birth." id="birthplace">
+    <datalist id="Place">
+        <option value="Mumbai">Mumbai</option>
+        <option value="Malegaon">Malegaon</option>
+        <option value="Nashik">Nashik</option>
+        <option value="Pune">Pune</option>
+        <option value="Dhule">Dhule</option>
+    </datalist>
+    <br>
+    <lable style="font-size:25px;    font-family:Georgia, 'Times New Roman', Times, serif;  font-weight:bold; text-transform:capitalize;">Gender:</lable>
+    <input type="radio" id="male" name="Gender" value="male">
+    <lable for="male" style="font-size:25px;    font-family:Georgia, 'Times New Roman', Times, serif;  font-weight:bold; text-transform:capitalize;">Male</lable>
+    <input type="radio" id="Female" name="Gender" value="Female">
+    <lable for="Female" style="font-size:25px;    font-family:Georgia, 'Times New Roman', Times, serif;  font-weight:bold; text-transform:capitalize;">Female</lable>
+    <br>
+    <lable style="font-size:25px;    font-family:Georgia, 'Times New Roman', Times, serif;  font-weight:bold; text-transform:capitalize;">Marital Status:</lable>
+    <input type="radio" id="Married." name="Marital Status" value="Married">
+    <lable  for="Married." style="font-size:25px;    font-family:Georgia, 'Times New Roman', Times, serif;  font-weight:bold; text-transform:capitalize;">Married</lable>
+    <input type="radio" id="Un Married" name="Marital Status" value="Un Married">
+    <lable for="Un Married"    style="font-size:25px;    font-family:Georgia, 'Times New Roman', Times, serif;  font-weight:bold; text-transform:capitalize;">Unmarried</lable>
+    <br>
+    <lable style="font-size:25px;    font-family:Georgia, 'Times New Roman', Times, serif;  font-weight:bold; text-transform:capitalize;">Nationality:</lable>
+    <input type="name" placeholder="Enter Nationality."><br>
+    <lable for="blood-group" style="font-size:25px;    font-family:Georgia, 'Times New Roman', Times, serif;  font-weight:bold; text-transform:capitalize;">Blood Group:</lable>
+<select id="blood-group" name="blood-group">
+    <option value="">--Choose--</option>
+    <option value="A+">A+</option>
+    <option value="A-">A-</option>
+    <option value="B+">B+</option>
+    <option value="B-">B-</option>
+    <option value="AB+">AB+</option>
+    <option value="AB-">AB-</option>
+<option value="O+">O+</option>
+<option value="O-">O-</option>
+</select>
+<br>
+<lable for="Religion" style="font-size:25px;    font-family:Georgia, 'Times New Roman', Times, serif;  font-weight:bold; text-transform:capitalize;">Religion:</lable>
+    <input list="Religion" placeholder="Enter your Religion" >
+    <datalist id="Religion">
+        <option value="Islame">Isalme</option>
+        <option value="Un Isalme">Un Islame</option>
+       </datalist>
+    <br>
+  
+    <lable for="Categoary" style="font-size:25px;    font-family:Georgia, 'Times New Roman', Times, serif;  font-weight:bold; text-transform:capitalize;">Category:</lable>
+    <input list="Categoary" placeholder="Enter The Categoary"><br>
+    <datalist id="Categoary">
+        <option value="General Category">General Category(G.N)</option>
+        <option value="SC">Scheduled Castes(SC)</option>
+        <option value="ST">Scheduled Tribes(ST)</option>
+        <option value="OBC">Other Backward Classes(OBC)</option>
+        <option value="EWS">Economically Weaker Section(EWS)</option>
+        <option value="Religious Category">Religious Category</option>
+    </datalist>
+        <lable style="font-size:25px;    font-family:Georgia, 'Times New Roman', Times, serif;  font-weight:bold; text-transform:capitalize;">Cast:</lable>
+    <input type="text" placeholder="Enter The Cast" style="width:150px;"> 
+<lable style="font-size:25px;    font-family:Georgia, 'Times New Roman', Times, serif;  font-weight:bold; text-transform:capitalize;">Sub-Cast:</lable>
+    <input type="text" placeholder="Enter The Sub-Cast" style="width:150px;"><br>
+    <lable style="font-size:25px;    font-family:Georgia, 'Times New Roman', Times, serif;  font-weight:bold; text-transform:capitalize;">Educational Qualification:</lable>
+    <input type="text" placeholder=" Enter your Qualification"><br> 
+    <lable style="font-size:25px;    font-family:Georgia, 'Times New Roman', Times, serif;  font-weight:bold; text-transform:capitalize;">Other Qualification:</lable>
+    <input type="text" placeholder="Enter other Qualification" style="width:320px ;"><br>
+   <lable style="font-size:25px;    font-family:Georgia, 'Times New Roman', Times, serif;  font-weight:bold; text-transform:capitalize;">Skills:</lable>
+    <input type="text" placeholder="Enter Your Skills" style="width:350px ;"><br>
+   
+    
+    
+    <lable for="Language" style="font-size:25px;    font-family:Georgia, 'Times New Roman', Times, serif;  font-weight:bold; text-transform:capitalize;">Language Known:</lable>
+    <input list="Language" placeholder="Enter your Language">
+    <datalist id="Language">
+        <option value="English">English</option>
+        <option value="Urdu">Urdu</option>
+<option value="Mrathi">Mrathi</option>
+<option value="Hindi">Hindi</option>
+<option value="Arbie">Arbie</option>
+</datalist>
+
+   <!-- Signature -->
+<div id="sign-box" class="upload-box" style="height:50px;" onclick="document.getElementById('sign-input').click();" >
+   <b style="color: Red; font-size: 25px;"> Signature:</b>
+</div>
+<input type="file" id="sign-input" class="upload-input" accept="image/*" onchange="previewImage(event, 'sign-box')">
+<br><br>
+
+</center></td></table> 
+     
+    
+    
+
+      <div class="button-group">
+        
+        <button type="button" onclick="window.print()">Print</button>
+      <button><a href="https://imageresizer.com/" style="color: red; text-decoration: none;">Photo Risize</a></button>
+    <button ><a href="file:///C:/Users/Rizwan%20Home/Desktop/Hamid%20Hasnain/Html,Css,Js.%20Examples/Bio%20Data%2001.html?blood-group=" style="color: red; text-decoration: none;">Resent</a></button>
+    </div>
+    </form>
+  </div>
+<!-- html2pdf Library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+  <script>
+    document.getElementById("photoInput").addEventListener("change", function () {
+      const file = this.files[0];
+      if (file) {
+        document.getElementById("photoPreview").src = URL.createObjectURL(file);
+      }
+      function downloadPDF() {
+            const element = document.getElementById('biodata');
+            html2pdf().from(element).save('My_BioData.pdf');
+        }
+    });
+    function previewPhoto(event) {
+    let reader = new FileReader();
+    reader.onload = function(){
+        let output = document.getElementById('photo-box');
+        output.innerHTML = `<img src="${reader.result}" alt="Passport Photo">`;
+    };
+    reader.readAsDataURL(event.target.files[0]);
+}
+
+function previewsign(event) {
+    let reader = new FileReader();
+    reader.onload = function(){
+        let output = document.getElementById('sign-box');
+        output.innerHTML = `<img src="${reader.result}" alt="Upload Signature">`;
+    };
+    reader.readAsDataURL(event.target.files[0]);
+}
+function previewImage(event, boxId) {
+    let reader = new FileReader();
+    reader.onload = function(){
+        let output = document.getElementById(boxId);
+        output.innerHTML = `<img src="${reader.result}" alt="Image">`;
+    };
+    reader.readAsDataURL(event.target.files[0]);
+}
+ </script>
+</body>
+</html>
